@@ -16,6 +16,7 @@ Note that this is inspired by [RN diff](https://github.com/ncuillery/rn-diff)
 
 Version|Compare view|Patch|Stats
 ----|----|----|----
+  1.0.2|[1.0.1...1.0.2](https://github.com/cexbrayat/angular-cli-diff/compare/1.0.1...1.0.2)|[1.0.1...1.0.2](https://github.com/cexbrayat/angular-cli-diff/compare/1.0.1...1.0.2.diff)| 30 files changed, 674 insertions(+)
   1.0.1|[1.0.0...1.0.1](https://github.com/cexbrayat/angular-cli-diff/compare/1.0.0...1.0.1)|[1.0.0...1.0.1](https://github.com/cexbrayat/angular-cli-diff/compare/1.0.0...1.0.1.diff)| 30 files changed, 674 insertions(+)
   1.0.0|[1.0.0...1.0.0](https://github.com/cexbrayat/angular-cli-diff/compare/1.0.0...1.0.0)|[1.0.0...1.0.0](https://github.com/cexbrayat/angular-cli-diff/compare/1.0.0...1.0.0.diff)|
 1.0.0|X|X|X
