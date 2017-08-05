@@ -1,0 +1,26 @@
+name: Check and update
+
+on:
+  push:
+    branches:
+      - master
+  schedule:
+    - cron:  '0 */2 * * *'
+
+jobs:
+  build:
+    runs-on: macOS-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-node@v4
+    - name: Set git user
+      run: |
+        git config --global user.email cedric@ninja-squad.com
+        git config --global user.name cexbrayat
+        git remote set-url origin https://$GITHUB_ACTOR:$GITHUB_TOKEN@github.com/cexbrayat/angular-cli-diff.git
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Generate new version
+      run: ./newVersion.sh
