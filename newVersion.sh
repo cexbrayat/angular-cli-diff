@@ -31,6 +31,7 @@ do
   fi
 
   echo "Generate ${version}"
+  git checkout init
   git checkout -b ${version}
   # delete app
   rm -rf ponyracer
@@ -38,11 +39,11 @@ do
   npx @angular/cli@${version} new ponyracer --skip-install
   git add ponyracer
   diffStat=`git --no-pager diff HEAD~1 --shortstat`
+  diffUrl="[${lastVersion}...${version}](https://github.com/cexbrayat/angular-cli-diff/compare/${lastVersion}...${version})"
+  patchUrl="[${lastVersion}...${version}](https://github.com/cexbrayat/angular-cli-diff/compare/${lastVersion}...${version}.diff)"
   git commit -am "chore: version ${version}"
   git push origin ${version} -f
   git checkout master
-  diffUrl="[${lastVersion}...${version}](https://github.com/cexbrayat/angular-cli-diff/compare/${lastVersion}...${version})"
-  patchUrl="[${lastVersion}...${version}](https://github.com/cexbrayat/angular-cli-diff/compare/${lastVersion}...${version}.diff)"
   # insert a row in the version table of the README
   sed -i '' 's/----|----|----|----/----|----|----|----\
   NEWLINE/g' README.md
