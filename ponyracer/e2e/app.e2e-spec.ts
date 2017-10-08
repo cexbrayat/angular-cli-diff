@@ -7,10 +7,8 @@ describe('ponyracer App', () => {
     page = new PonyracerPage();
   });
 
-  it('should display welcome message', done => {
+  it('should display welcome message', () => {
     page.navigateTo();
-    page.getParagraphText()
-      .then(msg => expect(msg).toEqual('Welcome to app!!'))
-      .then(done, done.fail);
+    expect(page.getParagraphText()).toEqual('Welcome to app!!');
   });
 });
