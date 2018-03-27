@@ -1,0 +1,138 @@
+{
+  "$schema": "./node_modules/@angular-devkit/core/src/workspace/workspace-schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "ponyracer": {
+      "root": "projects/ponyracer",
+      "projectType": "application",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-webpack:browser",
+          "options": {
+            "outputPath": "dist/ponyracer",
+            "index": "projects/ponyracer/src/index.html",
+            "main": "projects/ponyracer/src/main.ts",
+            "polyfills": "projects/ponyracer/src/polyfills.ts",
+            "tsConfig": "projects/ponyracer/tsconfig.app.json",
+            "assets": [
+              {
+                "glob": "favicon.ico",
+                "input": "projects/ponyracer/src",
+                "output": "./"
+              },
+              {
+                "glob": "**/*",
+                "input": "projects/ponyracer/src/assets",
+                "output": "assets"
+              }
+            ],
+            "styles": [
+              {
+                "input": "projects/ponyracer/src/styles.css"
+              }
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "from": "projects/ponyracer/src/environments/environment.ts",
+                  "to": "projects/ponyracer/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-webpack:dev-server",
+          "options": {
+            "browserTarget": "ponyracer:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "ponyracer:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-webpack:extract-i18n",
+          "options": {
+            "browserTarget": "ponyracer:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-webpack:karma",
+          "options": {
+            "main": "projects/ponyracer/src/test.ts",
+            "polyfills": "projects/ponyracer/src/polyfills.ts",
+            "tsConfig": "projects/ponyracer/tsconfig.spec.json",
+            "karmaConfig": "projects/ponyracer/karma.conf.js",
+            "styles": [
+              {
+                "input": "projects/ponyracer/styles.css"
+              }
+            ],
+            "scripts": [],
+            "assets": [
+              {
+                "glob": "favicon.ico",
+                "input": "projects/ponyracer/src/",
+                "output": "./"
+              },
+              {
+                "glob": "**/*",
+                "input": "projects/ponyracer/src/assets",
+                "output": "assets"
+              }
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-webpack:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ponyracer/tsconfig.app.json",
+              "projects/ponyracer/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ponyracer-e2e": {
+      "root": "projects/ponyracer-e2e",
+      "projectType": "application",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-webpack:protractor",
+          "options": {
+            "protractorConfig": "projects/ponyracer-e2e/protractor.conf.js",
+            "devServerTarget": "ponyracer:serve"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-webpack:tslint",
+          "options": {
+            "tsConfig": "projects/ponyracer-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
