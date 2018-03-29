@@ -8,7 +8,7 @@
       "projectType": "application",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-webpack:browser",
+          "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/ponyracer",
             "index": "projects/ponyracer/src/index.html",
@@ -55,7 +55,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-webpack:dev-server",
+          "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "ponyracer:build"
           },
@@ -66,13 +66,13 @@
           }
         },
         "extract-i18n": {
-          "builder": "@angular-devkit/build-webpack:extract-i18n",
+          "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
             "browserTarget": "ponyracer:build"
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-webpack:karma",
+          "builder": "@angular-devkit/build-angular:karma",
           "options": {
             "main": "projects/ponyracer/src/test.ts",
             "polyfills": "projects/ponyracer/src/polyfills.ts",
@@ -99,7 +99,7 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-webpack:tslint",
+          "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
               "projects/ponyracer/tsconfig.app.json",
@@ -117,14 +117,14 @@
       "projectType": "application",
       "architect": {
         "e2e": {
-          "builder": "@angular-devkit/build-webpack:protractor",
+          "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "projects/ponyracer-e2e/protractor.conf.js",
             "devServerTarget": "ponyracer:serve"
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-webpack:tslint",
+          "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "projects/ponyracer-e2e/tsconfig.e2e.json",
             "exclude": [
