@@ -4,32 +4,32 @@
   "newProjectRoot": "projects",
   "projects": {
     "ponyracer": {
-      "root": "projects/ponyracer",
+      "root": "",
       "projectType": "application",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "dist/ponyracer",
-            "index": "projects/ponyracer/src/index.html",
-            "main": "projects/ponyracer/src/main.ts",
-            "polyfills": "projects/ponyracer/src/polyfills.ts",
-            "tsConfig": "projects/ponyracer/tsconfig.app.json",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.app.json",
             "assets": [
               {
                 "glob": "favicon.ico",
-                "input": "projects/ponyracer/src",
-                "output": "./"
+                "input": "src",
+                "output": "/"
               },
               {
                 "glob": "**/*",
-                "input": "projects/ponyracer/src/assets",
-                "output": "assets"
+                "input": "src/assets",
+                "output": "/assets"
               }
             ],
             "styles": [
               {
-                "input": "projects/ponyracer/src/styles.css"
+                "input": "src/styles.css"
               }
             ],
             "scripts": []
@@ -38,8 +38,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "from": "projects/ponyracer/src/environments/environment.ts",
-                  "to": "projects/ponyracer/src/environments/environment.prod.ts"
+                  "src": "src/environments/environment.ts",
+                  "replaceWith": "src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -74,26 +74,26 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ponyracer/src/test.ts",
-            "polyfills": "projects/ponyracer/src/polyfills.ts",
-            "tsConfig": "projects/ponyracer/tsconfig.spec.json",
-            "karmaConfig": "projects/ponyracer/karma.conf.js",
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "src/tsconfig.spec.json",
+            "karmaConfig": "src/karma.conf.js",
             "styles": [
               {
-                "input": "projects/ponyracer/styles.css"
+                "input": "styles.css"
               }
             ],
             "scripts": [],
             "assets": [
               {
                 "glob": "favicon.ico",
-                "input": "projects/ponyracer/src/",
-                "output": "./"
+                "input": "src/",
+                "output": "/"
               },
               {
                 "glob": "**/*",
-                "input": "projects/ponyracer/src/assets",
-                "output": "assets"
+                "input": "src/assets",
+                "output": "/assets"
               }
             ]
           }
@@ -102,8 +102,8 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ponyracer/tsconfig.app.json",
-              "projects/ponyracer/tsconfig.spec.json"
+              "tsconfig.app.json",
+              "tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
@@ -113,20 +113,20 @@
       }
     },
     "ponyracer-e2e": {
-      "root": "projects/ponyracer-e2e",
+      "root": "e2e/",
       "projectType": "application",
       "architect": {
         "e2e": {
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
-            "protractorConfig": "projects/ponyracer-e2e/protractor.conf.js",
+            "protractorConfig": "e2e/protractor.conf.js",
             "devServerTarget": "ponyracer:serve"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": "projects/ponyracer-e2e/tsconfig.e2e.json",
+            "tsConfig": "e2e/tsconfig.e2e.json",
             "exclude": [
               "**/node_modules/**"
             ]
