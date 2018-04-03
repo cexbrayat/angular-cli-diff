@@ -29,7 +29,7 @@
     "@angular/compiler-cli": "^6.0.0-rc.1",
     "@angular-devkit/build-angular": "~0.0.9",
     "typescript": "~2.7.2",
-    "@angular/cli": "~6.0.0-beta.9",
+    "@angular/cli": "~6.0.0-rc.0",
     "@angular/language-service": "^6.0.0-rc.1",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
