@@ -29,9 +29,7 @@
               }
             ],
             "styles": [
-              {
-                "input": "src/styles.css"
-              }
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -134,6 +132,11 @@
           }
         }
       }
+    }
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "css"
     }
   }
 }
