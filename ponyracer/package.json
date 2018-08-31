@@ -21,12 +21,12 @@
     "@angular/platform-browser-dynamic": "^6.1.0",
     "@angular/router": "^6.1.0",
     "core-js": "^2.5.4",
-    "rxjs": "^6.0.0",
+    "rxjs": "~6.2.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.8.0-rc.0",
-    "@angular/cli": "~6.2.0-rc.0",
+    "@angular/cli": "~6.2.0-rc.1",
     "@angular/compiler-cli": "^6.1.0",
     "@angular/language-service": "^6.1.0",
     "@types/jasmine": "~2.8.8",
