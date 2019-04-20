@@ -4,11 +4,11 @@
   "newProjectRoot": "projects",
   "projects": {
     "ponyracer": {
+      "projectType": "application",
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
-      "projectType": "application",
       "prefix": "app",
-      "schematics": {},
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -25,8 +25,7 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": [],
-            "es5BrowserSupport": true
+            "scripts": []
           },
           "configurations": {
             "production": {
@@ -115,7 +114,6 @@
           }
         }
       }
-    }
-  },
+    }},
   "defaultProject": "ponyracer"
 }
