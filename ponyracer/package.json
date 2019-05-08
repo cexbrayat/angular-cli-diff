@@ -25,7 +25,7 @@
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.800.0-rc.2",
-    "@angular/cli": "~8.0.0-rc.2",
+    "@angular/cli": "~8.0.0-rc.3",
     "@angular/compiler-cli": "~8.0.0-rc.2",
     "@angular/language-service": "~8.0.0-rc.2",
     "@types/node": "~8.9.4",
