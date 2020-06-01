@@ -61,7 +61,7 @@ NEWLINE/g' README.md && rm README.md.bak
   # delete app
   rm -rf ponyracer
   # generate app with new CLI version
-  npx @angular/cli@${version} new ponyracer --skip-install --no-interactive
+  npx @angular/cli@${version} new ponyracer --skip-install --no-interactive --strict
   git add ponyracer
   git commit -am "chore: version ${version}"
   diffStat=`git --no-pager diff HEAD~ --shortstat`
