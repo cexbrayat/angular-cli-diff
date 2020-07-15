@@ -1,5 +1,8 @@
 {
   "extends": "tslint:recommended",
+  "rulesDirectory": [
+    "codelyzer"
+  ],
   "rules": {
     "align": {
       "options": [
@@ -9,25 +12,10 @@
     },
     "array-type": false,
     "arrow-return-shorthand": true,
-    "component-class-suffix": true,
-    "directive-selector": [
-      true,
-      "attribute",
-      "app",
-      "camelCase"
-    ],
-    "contextual-lifecycle": true,
     "curly": true,
     "deprecation": {
       "severity": "warning"
     },
-    "directive-class-suffix": true,
-    "component-selector": [
-      true,
-      "element",
-      "app",
-      "kebab-case"
-    ],
     "eofline": true,
     "import-blacklist": [
       true,
@@ -56,7 +44,6 @@
       }
     ],
     "no-any": true,
-    "no-conflicting-lifecycle": true,
     "no-console": [
       true,
       "debug",
@@ -66,18 +53,11 @@
       "trace"
     ],
     "no-empty": false,
-    "no-host-metadata-property": true,
     "no-inferrable-types": [
       true,
       "ignore-params"
     ],
-    "no-input-rename": true,
-    "no-inputs-metadata-property": true,
     "no-non-null-assertion": true,
-    "no-output-native": true,
-    "no-output-on-prefix": true,
-    "no-output-rename": true,
-    "no-outputs-metadata-property": true,
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
     "no-var-requires": false,
@@ -103,8 +83,6 @@
         "named": "never"
       }
     },
-    "template-banana-in-box": true,
-    "template-no-negated-async": true,
     "typedef": [
       true,
       "call-signature"
@@ -127,8 +105,6 @@
         }
       ]
     },
-    "use-lifecycle-interface": true,
-    "use-pipe-transform-interface": true,
     "variable-name": {
       "options": [
         "ban-keywords",
@@ -145,9 +121,33 @@
         "check-type",
         "check-typecast"
       ]
-    }
-  },
-  "rulesDirectory": [
-    "codelyzer"
-  ]
+    },
+    "component-class-suffix": true,
+    "contextual-lifecycle": true,
+    "directive-class-suffix": true,
+    "no-conflicting-lifecycle": true,
+    "no-host-metadata-property": true,
+    "no-input-rename": true,
+    "no-inputs-metadata-property": true,
+    "no-output-native": true,
+    "no-output-on-prefix": true,
+    "no-output-rename": true,
+    "no-outputs-metadata-property": true,
+    "template-banana-in-box": true,
+    "template-no-negated-async": true,
+    "use-lifecycle-interface": true,
+    "use-pipe-transform-interface": true,
+    "directive-selector": [
+      true,
+      "attribute",
+      "app",
+      "camelCase"
+    ],
+    "component-selector": [
+      true,
+      "element",
+      "app",
+      "kebab-case"
+    ]
+  }
 }
