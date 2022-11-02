@@ -23,11 +23,11 @@
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.0.0-rc.1",
-    "@angular/cli": "~15.0.0-rc.1",
+    "@angular-devkit/build-angular": "^15.0.0-rc.2",
+    "@angular/cli": "~15.0.0-rc.2",
     "@angular/compiler-cli": "^15.0.0-next.0",
     "@types/jasmine": "~4.3.0",
-    "jasmine-core": "~4.4.0",
+    "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
