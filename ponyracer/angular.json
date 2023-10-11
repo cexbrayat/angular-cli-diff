@@ -57,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "ponyracer:build:production"
+              "buildTarget": "ponyracer:build:production"
             },
             "development": {
-              "browserTarget": "ponyracer:build:development"
+              "buildTarget": "ponyracer:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -68,7 +68,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ponyracer:build"
+            "buildTarget": "ponyracer:build"
           }
         },
         "test": {
