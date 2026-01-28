@@ -8,35 +8,24 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
-  "prettier": {
-    "printWidth": 100,
-    "singleQuote": true,
-    "overrides": [
-      {
-        "files": "*.html",
-        "options": {
-          "parser": "angular"
-        }
-      }
-    ]
-  },
   "private": true,
   "packageManager": "npm@10.9.4",
   "dependencies": {
-    "@angular/common": "^21.1.0",
-    "@angular/compiler": "^21.1.0",
-    "@angular/core": "^21.1.0",
-    "@angular/forms": "^21.1.0",
-    "@angular/platform-browser": "^21.1.0",
-    "@angular/router": "^21.1.0",
+    "@angular/common": "^21.2.0-next.0",
+    "@angular/compiler": "^21.2.0-next.0",
+    "@angular/core": "^21.2.0-next.0",
+    "@angular/forms": "^21.2.0-next.0",
+    "@angular/platform-browser": "^21.2.0-next.0",
+    "@angular/router": "^21.2.0-next.0",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0"
   },
   "devDependencies": {
-    "@angular/build": "^21.1.5",
-    "@angular/cli": "^21.1.5",
-    "@angular/compiler-cli": "^21.1.0",
+    "@angular/build": "^21.2.0-next.0",
+    "@angular/cli": "^21.2.0-next.0",
+    "@angular/compiler-cli": "^21.2.0-next.0",
     "jsdom": "^27.1.0",
+    "prettier": "^3.8.1",
     "typescript": "~5.9.2",
     "vitest": "^4.0.8"
   }
